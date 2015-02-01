@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/jquery.mobile-1.4.3.min.css">
+		<script src="assets/js/jquery-1.11.1.min.js"></script>
+		<script src="assets/js/jquery.mobile-1.4.3.min.js"></script>
+		<script src="assets/js/mask.js"></script>
+		<script src="assets/js/script.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="entrada">
+			<div data-role="header">
+				<h1>APPinga</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<h2>Insira os preços das bebidas disponíveis</h2>
+				<label for="cerveja-latinha">Cerveja latinha</label>
+				<input type="text" id="cerveja-latinha" value="" grau="4" ml="276" onkeyup="mascara(this, mvalor);">
+
+				<label for="cerveja-lata">Cerveja lata</label>
+				<input type="text" id="cerveja-lata" value="" grau="4" ml="350" onkeyup="mascara(this, mvalor);">
+
+				<label for="cerveja-latao">Cerveja latão</label>
+				<input type="text" id="cerveja-latao" value="" grau="4" ml="473" onkeyup="mascara(this, mvalor);">
+
+				<label for="cachaca-dose">Dose de Cachaça</label>
+				<input type="text" name="cachaca-dose" id="cachaca-dose" value="" grau="40" ml="50" onkeyup="mascara(this, mvalor);">
+
+				<label for="vodka-dose">Dose de Vodka</label>
+				<input type="text" name="vodka-dose" id="vodka-dose" value="" grau="40" ml="50" onkeyup="mascara(this, mvalor);">
+
+				<label for="whisky-dose">Dose de Whisky</label>
+				<input type="text" name="whisky-dose" id="whisky-dose" value="" grau="42" ml="50" onkeyup="mascara(this, mvalor);">
+
+				<label for="catuaba">Copo de Catuaba com gelo 250ml:</label>
+				<input type="text" name="catuaba" id="catuaba" value="" grau="12" ml="200" onkeyup="mascara(this, mvalor);">
+
+				<a id="btn-calcular" href="#ranking" class="ui-btn ui-btn-b ui-btn-inline ui-icon-check ui-btn-icon-left">Calcular</a>
+			</div>
+			<div data-role="footer">
+				<h4>Copyright Fabio Hernandez Caires</h4>
+			</div><!-- /footer -->
+		</div>
+
+		<div data-role="page" id="ranking">
+			<div data-role="header">
+				<h1>APPinga</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<h2>As melhores opções pra ficar doidão são:</h2>
+				<p>*por custo de ml/alcool</p>
+				<ol></ol>
+				<a href="#entrada" class="ui-btn ui-btn-b ui-btn-inline ui-icon-refresh ui-btn-icon-left ui-shadow-icon">Refazer Cálculo</a>
+			</div>
+			<div data-role="footer">
+				<h4>Copyright Fabio Hernandez Caires</h4>
+			</div><!-- /footer -->
+		</div>
+	</body>
+</html>
