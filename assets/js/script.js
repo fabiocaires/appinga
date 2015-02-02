@@ -25,10 +25,10 @@ $(function(){
 
 					var density 	= alcoholic*drinkAmount;
 
-					var reason 		= ((drinkAmount/density)
-											.toFixed(2));
+					var reason 		= ((drinkPrice/density)
+										.toFixed(2));
 
-					ranking.push({ name : drinkName, price : drinkPrice }); 
+					ranking.push({ name : drinkName, price : reason }); 
 				}
 		});
 		buildRanking(ranking);
