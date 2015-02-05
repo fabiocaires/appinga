@@ -1,0 +1,29 @@
+header, footer{
+	background: #191818;
+	color: #fff;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+header blockquote{
+	font-size: 10px;
+	text-align: center;
+}
+.pure-form{
+	margin: 0 auto;
+}
+.pure-form input.drink-price{
+	margin-bottom: 20px;
+	width: 100%;
+}
+.pure-button-calcular{
+	float: right;
+	margin: 10px 0;
+}
+.pure-menu.pure-menu-horizontal.pure-menu-u ul{
+	display: inline;
+}
+.pure-menu-u li{
+	text-align: center;
+	width: 32%;
+}
