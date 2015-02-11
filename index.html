@@ -5,27 +5,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/pure-min.css">
 		<link rel="stylesheet" href="assets/css/style.css">
-		<!-- <script src="assets/js/zepto.min.js"></script>
+		<script src="assets/js/zepto.min.js"></script>
 		<script src="assets/js/mask.js"></script>
-		<script src="assets/js/script.js"></script> -->
+		<script src="assets/js/script.js"></script>
 	</head>
 	<body>
-		<section id="page-1">
-			<div class="pure-g">
-				<div class="pure-u-24-24">
-					<header>
-						<h1>APPinga
-						<blockquote>Descubra o jeito mais barato de ficar doidão</blockquote></h1>
-					</header>
+		<div class="pure-g">
+			<div class="pure-u-24-24">
+				<header>
+					<h1>APPinga
+					<blockquote>Descubra o jeito mais barato de ficar doidão</blockquote></h1>
 					<div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-u">
 						<ul>
-        					<li><a href="#">Calcular</a></li>
-        					<li><a href="#">Individual</a></li>
-        					<li><a href="#">Sobre</a></li>
+        					<li><a href="#page-1">Calcular</a></li>
+        					<li><a href="#page-2">Individual</a></li>
+        					<li><a href="#page-3">Sobre</a></li>
         				</ul>
 					</div>	
-				</div>
-				<form class="pure-form pure-form-stacked">
+				</header>
+			</div>
+			<section id="page-1">
+				<form id="input-prices" class="pure-form pure-form-stacked">
 					<div class="pure-u-1-24"></div>
 					<div class="pure-u-22-24">
 						<h2>Insira os preços das bebidas disponíveis</h2>
@@ -35,56 +35,58 @@
 					<div class="pure-u-1-24"></div>
 					<div class="pure-u-22-24">
 						<label for="cerveja-latinha">Cerveja latinha</label>
-						<input type="text" class="drink-price" id="cerveja-latinha" value="" data-grau="4" data-ml="276" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Cerveja Latinha" class="drink-price" id="cerveja-latinha" value="" data-grau="4" data-ml="276" onkeyup="mascara(this, mvalor);">
 					
 						<label for="cerveja-lata">Cerveja lata</label>
-						<input type="text" class="drink-price" id="cerveja-lata" value="" data-grau="4" data-ml="350" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Cerveja lata" class="drink-price" id="cerveja-lata" value="" data-grau="4" data-ml="350" onkeyup="mascara(this, mvalor);">
 
 						<label for="cerveja-latao">Cerveja latão</label>
-						<input type="text" class="drink-price" id="cerveja-latao" value="" data-grau="4" data-ml="473" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Cerveja latão" class="drink-price" id="cerveja-latao" value="" data-grau="4" data-ml="473" onkeyup="mascara(this, mvalor);">
 
 						<label for="cachaca-dose">Dose de Cachaça</label>
-						<input type="text" class="drink-price" id="cachaca-dose" value="" data-grau="40" data-ml="50" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Dose de Cachaça" class="drink-price" id="cachaca-dose" value="" data-grau="40" data-ml="50" onkeyup="mascara(this, mvalor);">
 
 						<label for="vodka-dose">Dose de Vodka</label>
-						<input type="text" class="drink-price" id="vodka-dose" value="" data-grau="40" data-ml="50" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Dose de Vodka" class="drink-price" id="vodka-dose" value="" data-grau="40" data-ml="50" onkeyup="mascara(this, mvalor);">
 
 						<label for="whisky-dose">Dose de Whisky</label>
-						<input type="text" class="drink-price" id="whisky-dose" value="" data-grau="42" data-ml="50" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Dose de Whisky" class="drink-price" id="whisky-dose" value="" data-grau="42" data-ml="50" onkeyup="mascara(this, mvalor);">
 
 						<label for="catuaba">Copo de Catuaba com gelo 250ml</label>
-						<input type="text" class="drink-price" id="catuaba" value="" data-grau="12" data-ml="200" onkeyup="mascara(this, mvalor);">
+						<input type="text" title="Copo de Catuaba com gelo, 250ml" class="drink-price" id="catuaba" value="" data-grau="12" data-ml="200" onkeyup="mascara(this, mvalor);">
 					</div>
 					<div class="pure-u-1-24"></div>
 
 					<div class="pure-u-1-24"></div>
 					<div class="pure-u-22-24">
-						<button class="pure-button pure-button-primary pure-button-calcular">Me passa um ranking!</button>
+						<button id="btn-ranking" class="pure-button pure-button-primary pure-button-calcular">Me passa um ranking!</button>
 					</div>
 					<div class="pure-u-1-24"></div>
 				</form>
-			</div>
-			<div class="pure-u-24-24">
-				<footer>
-					<h4>Copyright Fabio Hernandez Caires</h4>
-				</footer>
-			</div>
-		</section>
-
+			</section>
 			<section id="page-2" style="display:none">
-				<div data-role="header">
-					<h1>APPinga</h1>
-				</div>
-				<div role="main" class="ui-content">
+				<div class="pure-u-1-24"></div>
+				<div class="pure-u-22-24">
 					<h2>As melhores opções pra ficar doidão são:</h2>
 					<p>*por custo de ml/alcool</p>
 					<ol></ol>
 					<a href="#entrada" class="ui-btn ui-btn-b ui-btn-inline ui-icon-refresh ui-btn-icon-left ui-shadow-icon">Refazer Cálculo</a>
 				</div>
-				<div data-role="footer">
-					<h4>Copyright Fabio Hernandez Caires</h4>
-				</div><!-- /footer -->
+				<div class="pure-u-1-24"></div>
 			</section>
-		</form>
+			<section id="page-3" style="display:none">
+				<div class="pure-u-1-24"></div>
+				<div class="pure-u-22-24">
+					<h2>Sobre</h2>
+					<p>*por custo de ml/alcool</p>
+				</div>
+				<div class="pure-u-1-24"></div>
+			</section>
+			<div class="pure-u-24-24">
+				<footer>
+					<h4>Copyright Fabio Hernandez Caires</h4>
+				</footer>
+			</div>
+		</div>
 	</body>
 </html>
