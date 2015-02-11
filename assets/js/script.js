@@ -11,12 +11,13 @@ $(function(){
 			if(elements[i].value != ""){
 				var element 		= $(elements[i]);
 				var drinkName 		= element.prop("title");
-				var drinkPrice		= parseFloat(element.value);
-				var drinkPrice 		= drinkPrice.replace("," , ".");
-				var drinkAmount		= element.prop("ml");
-				var drinkAlcohol 	= element.prop("grau");
+				var drinkPrice		= element.val();
+					drinkPrice 		= drinkPrice.replace("," , ".");
+				var drinkAmount		= element.data("ml");
+				var drinkAlcohol 	= element.data("grau") / 100;
 				var drinkDensity	= drinkAlcohol*drinkAmount;
 				var drinkReason		= ((drinkPrice/drinkDensity).toFixed(2));
+
 				ranking.push({ name : drinkName, price : drinkReason});
 			}
 		}
@@ -47,7 +48,7 @@ $(function(){
 		// 			ranking.push({ name : drinkName, price : reason }); 
 		// 		}
 		// });
-		// buildRanking(ranking);
+		buildRanking(ranking);
 	}
 
 	function buildRanking(ranking){
