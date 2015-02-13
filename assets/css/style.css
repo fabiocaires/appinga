@@ -1,16 +1,36 @@
 header, footer{
-	background: #191818;
 	color: #fff;
 	float: left;
 	text-align: center;
 	width: 100%;
 }
+body{
+	color: #777;
+	margin-bottom: 30px;
+}
+section{
+	width: 100%;
+}
+footer{
+	display: none;
+}
 header blockquote{
 	font-size: 10px;
 	text-align: center;
 }
+hr{
+	margin: 0;
+}
+.padding-1{
+	box-sizing: border-box;
+	float: left;
+	padding: 0 1em;
+}
 .pure-form{
 	margin: 0 auto;
+}
+.pure-form input{
+	color: #777;
 }
 .pure-form input.drink-price{
 	margin-bottom: 20px;
@@ -18,12 +38,16 @@ header blockquote{
 }
 .pure-button-calcular{
 	float: right;
-	margin: 10px 0;
+	margin: 17px 0;
+	padding: .5em 3em;
 }
 .pure-menu.pure-menu-horizontal.pure-menu-u ul{
 	display: inline;
 }
 .pure-menu-u li{
 	text-align: center;
-	width: 32%;
+	width: 100%;
+}
+.pure-menu-u li i{
+	margin-right: .5em;
 }
