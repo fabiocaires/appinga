@@ -14,40 +14,53 @@ section{
 footer{
 	display: none;
 }
-header blockquote{
-	font-size: 10px;
+.brand-logo{
+	left: .5em;
+}
+header{
+	margin-bottom: 1em;
+}
+.side-nav#mobile{
+	text-align: left;
+}
+.side-nav#mobile h4{
+	color: #ddd;
 	text-align: center;
 }
-hr{
-	margin: 0;
+.title-page{
+	background-color: #ddd;
+	color: #444;
+	padding: .5em 0;
 }
-.padding-1{
-	box-sizing: border-box;
-	float: left;
-	padding: 0 1em;
+.title-page h5{
+	font-size: 1.2em;
 }
-.pure-form{
-	margin: 0 auto;
+#input-prices{
+	margin-top: 1em;
 }
-.pure-form input{
-	color: #777;
+#btn-ranking{
+	/*color: #444;*/
 }
-.pure-form input.drink-price{
-	margin-bottom: 20px;
-	width: 100%;
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #c0ca33;
 }
-.pure-button-calcular{
-	float: right;
-	margin: 17px 0;
-	padding: .5em 3em;
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #c0ca33;
+ box-shadow: 0 1px 0 0 #c0ca33;
 }
-.pure-menu.pure-menu-horizontal.pure-menu-u ul{
-	display: inline;
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #c0ca33;
+ box-shadow: 0 1px 0 0 #c0ca33;
 }
-.pure-menu-u li{
-	text-align: center;
-	width: 100%;
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #c0ca33;
+ box-shadow: 0 1px 0 0 #c0ca33;
 }
-.pure-menu-u li i{
-	margin-right: .5em;
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #c0ca33;
 }
