@@ -2,14 +2,50 @@
 
 	var app = angular.module("appinga", []);
 
-	app.controller("PaginationController", function(){
+	app.controller("AppController", function(){
+
 		this.page = 1;
+
 		this.selectPage = function(setPage){
 			this.page = setPage;
 		};
+
 		this.isSelected = function(checkPage){
 			return this.page === checkPage;
 		};
+
+		this.countDrinks = function(){
+			alert("chegou");
+			var ranking = [];
+			var elements = document.querySelectorAll("#input-prices input");
+			var rankingResult = document.querySelectorAll("#page-2 ol li");
+
+			for( i = 0; i < rankingResult.length; i++ ){
+		 		rankingResult[i].remove(i);
+		 	}
+
+		 	// precisa arrumar essa parte, a leitura dos atributos ml, grau
+		 	// não retornam números, mesmo que rode um parseInt() a conta não funcioca
+
+		 	for( i = 0; i < elements.length; i++ ){
+		 		if(elements[i].value != ""){
+		 			var element 		= elements[i];
+		 			var drinkName 		= element.getAttribute("title");
+		 			var drinkPrice		= element.value;
+		 				drinkPrice 		= drinkPrice.replace("," , ".");
+		 			var drinkAmount		= element.getAttribute("ml");
+		 			var drinkAlcohol 	= element.getAttribute("grau") / 100;
+		 			var drinkDensity	= drinkAlcohol*drinkAmount;
+		 			console.log(drinkAmount+" "+drinkAlcohol+" "+drinkDensity);
+		 			var drinkReason		= ((drinkPrice/drinkDensity).toFixed(2));
+
+		 			ranking.push({ name : drinkName, price : drinkReason});
+		 		}
+		 	}
+		 	console.log(ranking);
+
+		};
+
 	});
 
 

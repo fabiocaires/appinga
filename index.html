@@ -1,34 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html ng-app="appinga">
 	<head>
 		<meta charset="UTF-8">
-		<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="assets/css/style.css">
+		<link type="text/css" rel="stylesheet" href="app/css/materialize.min.css" media="screen,projection">
+		<link rel="stylesheet" href="app/css/style.css">
+		<script type="text/javascript" src="app/js/mask.js"></script>
+		<script type="text/javascript" src="app/js/jquery-2.1.3.min.js"></script>
+	  	<script type="text/javascript" src="app/js/materialize.min.js"></script>
+		<script type="text/javascript" src="app/js/angular.min.js"></script>
+		<script type="text/javascript" src="app/js/app.js"></script>
+		<script>
+			$(".button-collapse").sideNav();
+		</script>
 	</head>
-	<body ng-controller="PaginationController as pagination">
+	<body ng-controller="AppController as app">
 		<header class="">
 			<nav>
 				<div class="nav-wrapper deep-purple">
 					<a href="#!" class="left brand-logo">Appinga</a>
 			        <a href="#" data-activates="mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			        <ul class="right hide-on-med-and-down">
-			          <li ng-class="{ active: pagination.isSelected(1) }"><a ng-click="pagination.selectPage(1)">Qual compensa mais?</a></li>
-			          <li ng-class="{ active: pagination.isSelected(2) }"><a ng-click="pagination.selectPage(2)">Cálculo individual</a></li>
-			          <li ng-class="{ active: pagination.isSelected(3) }"><a ng-click="pagination.selectPage(3)">Sobre</a></li>
+			          <li ng-class="{ active: app.isSelected(1) }"><a ng-click="app.selectPage(1)">Qual compensa mais?</a></li>
+			          <li ng-class="{ active: app.isSelected(2) }"><a ng-click="app.selectPage(2)">Cálculo individual</a></li>
+			          <li ng-class="{ active: app.isSelected(3) }"><a ng-click="app.selectPage(3)">Sobre</a></li>
 			        </ul>
 			        <ul class="side-nav" id="mobile">
 			        	<h4>Appinga</h4>
 			        	<div class="divider"></div>
-						<li ng-class="{ active: pagination.isSelected(1) }"><a ng-click="pagination.selectPage(1)"><h6>Qual compensa mais?</h6></a></li>
-						<li ng-class="{ active: pagination.isSelected(2) }"><a ng-click="pagination.selectPage(2)"><h6>Cálculo individual</h6></a></li>
-						<li ng-class="{ active: pagination.isSelected(3) }"><a ng-click="pagination.selectPage(3)"><h6>Sobre</h6></a></li>
+						<li ng-class="{ active: app.isSelected(1) }"><a ng-click="app.selectPage(1)"><h6>Qual compensa mais?</h6></a></li>
+						<li ng-class="{ active: app.isSelected(2) }"><a ng-click="app.selectPage(2)"><h6>Cálculo individual</h6></a></li>
+						<li ng-class="{ active: app.isSelected(3) }"><a ng-click="app.selectPage(3)"><h6>Sobre</h6></a></li>
 			        </ul>
 				</div>
 			</nav>
 		</header>
 		<div class="divider"></div>
-		<section id="page-1" ng-show="pagination.isSelected(1)">
+		<section id="page-1" ng-show="app.isSelected(1)">
 			<div class="title-page">
 				<h5 class="center-align">Insira os preços das bebidas disponíveis</h5>
 			</div>
@@ -91,14 +99,14 @@
 
 
 						<div class="input-field col m6 s12 right">
-							<a id="btn-ranking" class="waves-effect lime darken-1 btn right">Me passa um ranking!</a>
+							<button ng-click="app.countDrinks()" id="btn-ranking" class="waves-effect lime darken-1 btn right">Me passa um ranking!</button>
 						</div>
 
 					</div>
 				</form>
 			</div>
 		</section>
-		<section id="page-2" ng-show="pagination.isSelected(2)">
+		<section id="page-2" ng-show="app.isSelected(2)">
 			<div class="container">
 				<h2>As melhores opções pra ficar doidão são:</h2>
 				<p>*por custo de ml/alcool</p>
@@ -106,19 +114,11 @@
 				<button class="pure-button pure-button-primary pure-button-refazer">Refazer Cálculo</button>
 			</div>
 		</section>
-		<section id="page-3" ng-show="pagination.isSelected(3)">
+		<section id="page-3" ng-show="app.isSelected(3)">
 			<div class="pure-u-24-24 padding-1">
 				<h2>Sobre</h2>
 				<p>*por custo de ml/alcool</p>
 			</div>
 		</section>
 	</body>
-	<script type="text/javascript" src="assets/js/mask.js"></script>
-	<script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="assets/js/angular.min.js"></script>
-  	<script type="text/javascript" src="assets/js/materialize.min.js"></script>
-	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script>
-		$(".button-collapse").sideNav();
-	</script>
 </html>

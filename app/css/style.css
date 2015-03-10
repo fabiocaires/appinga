@@ -40,6 +40,7 @@ header{
 }
 #btn-ranking{
 	/*color: #444;*/
+	font-size: 1em;
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
